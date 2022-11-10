@@ -1,0 +1,237 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+    /* outline: 1px solid red;  */
+}
+
+body {
+    min-width: 100vw; /**/
+    display: flex; 
+}
+
+.sidebar { 
+    background-color: #0284C7; 
+    min-height: 100vh; 
+    padding: 2em; 
+    flex: 0 0 auto; 
+}
+
+.add-book-btn { 
+    color: white; 
+    background-color: #0284C7;
+    font-weight: 700; 
+    padding: 0.75em; 
+    border: 1px solid white; 
+    border-radius: 0.5em;
+}
+
+.add-book-btn:hover,
+.add-book-btn:focus { 
+    background-color: #0ea5e9; 
+}
+
+.add-book-btn:active { 
+    box-shadow: inset 0 0 1px 1px black;
+    transform: scale(1.02);
+}
+
+.modal {
+    display: none; /**/
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-header { 
+    color: white; 
+    background-color: #dc2626;
+    padding: 0.125em 1em;
+    display: flex;
+    justify-content:space-between;
+}
+
+form {
+    padding: 1em 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+label {
+    display: grid; 
+    grid-template-columns: 1fr 5fr;
+}
+
+input {
+    background-color: #cbd5e1;
+    font-size: 1em;
+    padding: 0.3em;
+    border: 0.1em solid black;
+    border-radius: 0.25em;
+}
+
+input:hover {
+    background-color: #E2E8F0;
+}
+
+input:active,
+input:focus {
+    background-color: #f1f5f9;
+}
+
+input:invalid {
+    border: 0.01em solid red;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 1em;
+    margin-top: 0.25em;   
+    border: 0.125em solid gray;
+    position: relative;
+    user-select: none;
+}
+
+input[type="checkbox"]::before {
+    content: "✔";
+    color: white;    
+    font-size: 1.09em;
+    font-weight: 500;
+    line-height: 1;
+    position: absolute;
+    top: -0.16em;
+    right: 0.01em;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #047857 ;
+}
+
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+.warning { 
+    color: red; 
+    font-weight: 500; 
+    text-align: center;
+    visibility: hidden;
+}
+
+input[type="submit"] {
+    color: #f43f5e;
+    font-weight: 700; 
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 0.5em;
+    margin-top: 0em;
+    box-shadow: 0.05em 0.05em 0.1em 0.1em rgba(0,0,0,0.5);
+    align-self: center;    
+}
+
+input[type="submit"]:active {
+    font-size: 0.9em; /* Input with "submit" type has its value font-size at 1em by default; */
+    box-shadow: none;
+}
+
+input[type="reset"] {
+    display: none;
+}
+
+.modal-content { 
+    background-color: #fefefe;
+    width: 60%;
+    margin: auto; 
+    margin-top: 10em; 
+    padding: 0; 
+    border: 1px solid #888; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation: dropdown 0.4s;        
+}
+
+@keyframes dropdown { 
+    0% { 
+        margin-top: 0; 
+        top: -50px; 
+        opacity: 0; 
+    }
+    100% { 
+        margin-top: 10em; 
+        top: 0; 
+        opacity: 1; 
+    }
+}
+
+.close {
+    color: #e7e5e4; 
+    font-size: 1.75em; 
+    font-weight: bold; 
+ }
+
+.close:hover, 
+.close:focus {
+    color: black; 
+    text-decoration: none;
+    cursor: pointer; 
+}
+
+.bookshelf { 
+    background-color: #475569; 
+    width: 100vw;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-rows: repeat(autofit, 1fr);
+    gap: 1em;
+}
+
+.book-card { 
+    background-color: rgba(103, 232, 249, 0.8); 
+    width: 20rem; 
+    height: 20rem; 
+    box-shadow: 0.05em 0.05em 1em 0.05em rgba(256, 256, 256, 0.5);
+    position: relative; 
+}
+
+.book-card:hover { 
+    background-color: #67e8f9;
+    transform: scale(1.2); 
+    z-index: 1; 
+}
+
+.book-card > button { 
+    font-size: 2em;
+    font-weight: bold; 
+    color: white; 
+    background-color: rgba(255, 0, 0, 0.8); 
+    padding: 0 0.2em;
+    border-radius: 0.2em; 
+    box-shadow: 0.1em 0.1em black; 
+    position: absolute; 
+    top: 8em; 
+    left: 4.5em;
+}
+
+.book-card > button:hover { 
+    background-color: #FF8A8A;
+}
+
+.book-card > button:active { 
+    box-shadow: none; 
+    transform: scale(1.1); 
+}
+
+.book-card > h1, 
+.book-card > h2, 
+.book-card > h3 {
+    margin: 16px;
+}
