@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+
+    <style>
+        .modal-content {
+            animation: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <button class="add-book-btn">NEW BOOK</button>
+
+        <div id="form" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Add a new book?</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <label for="title">Title:
+                            <input type="text" name="title" id="title" required>
+                        </label>
+
+                        <label for="author">Author:
+                            <input type="text" name="author" id="author" required>
+                        </label>
+
+                        <label for="Pages">Page(s):
+                            <input type="number" name="pages" id="pages" min="0" required>
+                        </label>
+
+                        <label for="status">Read:
+                            <input type="checkbox" name="status" id="status" value="checked">
+                        </label>
+                        
+                        <div class="warning">*You have to fill in all the fields</div>
+                        
+                        <input type="submit" name="submit" id="submit" value="Add Book">
+
+                        <input type="reset" name="reset" id="reset" value="Reset">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bookshelf"></div>
+</body>
+
+</html>
