@@ -36,6 +36,7 @@ Step 7: Add the function to submit to new book.
             + Automatically capitalizing the title and author name if the user hasn't done so. 
         The submit button will create a new object: const newBook = new Book();
 Step 8: Add a button to remove certain book objects. 
+Step 9: Add a button to toggle "Read" status.
 
 Advanced functions: 
 - Add a search function with certain filter categories selector. 
@@ -45,14 +46,14 @@ Advanced functions:
 book1 = { 
     title: "The Wind-Up Bird Chronicle", 
     author: "Haruki Murakami", 
-    page:  607, 
+    pages:  607, 
     status: "Read"
 }
 
 book2 = { 
     title: "Spring Snow: The Sea Of Fertility, 1", 
     author: "Yukio Mishima", 
-    page: 400, 
+    pages: 400, 
     status: "Unread"
 }
 
