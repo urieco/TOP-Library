@@ -14,6 +14,7 @@ HTML, CSS:
 
 JS: 
 Basic structure: 
+
     let myLibrary = [];
 
     function Book(title, author, pages, status) { 
@@ -43,6 +44,7 @@ Advanced functions:
 
 
 **Book samples**
+
 book1 = { 
     title: "The Wind-Up Bird Chronicle", 
     author: "Haruki Murakami", 
@@ -55,5 +57,12 @@ book2 = {
     author: "Yukio Mishima", 
     pages: 400, 
     status: "Unread"
+}
+
+book3 = {
+        title: "Sans Famille", 
+        author: "Hector Malot", 
+        pages: 537, 
+        status: "Read"
 }
 
