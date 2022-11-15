@@ -139,7 +139,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:active {
-    font-size: 0.9em; /* Input with "submit" type has its value font-size at 1em by default; */
+    /* Input with "submit" type has its value font-size at 1em by default; */
+    font-size: 0.9em; 
     box-shadow: none;
 }
 
@@ -187,11 +188,13 @@ input[type="reset"] {
 .bookshelf { 
     background-color: #475569; 
     width: 100vw;
-    padding: 1em;
+    padding: 2em 2em 5em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    grid-template-rows: repeat(autofit, 1fr);
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    grid-auto-rows: 320px;
+    justify-items: center;
+    align-items: center;
+    gap: 2em;
 }
 
 .book-card { 
@@ -208,7 +211,7 @@ input[type="reset"] {
     z-index: 1; 
 }
 
-.book-card > button { 
+.book-card > .remove { 
     font-size: 2em;
     font-weight: bold; 
     color: white; 
@@ -217,17 +220,49 @@ input[type="reset"] {
     border-radius: 0.2em; 
     box-shadow: 0.1em 0.1em black; 
     position: absolute; 
-    top: 8em; 
-    left: 4.5em;
+    top: 8.25em; 
+    left: 8.5em;
 }
 
-.book-card > button:hover { 
+.book-card > .remove:hover { 
     background-color: #FF8A8A;
 }
 
-.book-card > button:active { 
+.book-card > .remove:active { 
     box-shadow: none; 
-    transform: scale(1.1); 
+    transform: scale(0.9); 
+}
+
+.book-card > button:last-child {
+    color: white; 
+    font-size: 2rem;
+    width: 8em;
+    border-radius: 0.2em;
+    box-shadow: 0.1em 0.1em black; 
+    position: absolute; 
+    top: 8.25em;
+    left: 0.25em;
+}
+
+.book-card > button:active:last-child { 
+    box-shadow: none; 
+    transform: scale(0.9); 
+}
+
+.book-card > button:hover:last-child {
+    opacity: 0.8; 
+}
+
+.toggle-to-read {
+    background-color: green;
+}
+
+.toggle-to-unread {
+    background-color: rgba(255, 0, 0, 0.8); 
+}
+
+button {
+    cursor: pointer; 
 }
 
 .book-card > h1, 
