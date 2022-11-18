@@ -25,13 +25,15 @@ Basic structure:
         //do stuff here. 
     }
 
-Step 1: Create the constructor.
-Step 2: Test it out with a sample of selected books. 
-Step 3: Write a function that loops through the array and displays each book on the page. 
-Step 4: Write a function to add new books to the array, linked with the submit button. 
-Step 5: Automatically update the list on the website. 
-Step 6: Add a pop-up modal form for adding new books.
-Step 7: Add the function to submit to new book. 
+Progress steps: 
+
+- Step 1: Create the constructor.
+- Step 2: Test it out with a sample of selected books. 
+- Step 3: Write a function that loops through the array and displays each book on the page. 
+- Step 4: Write a function to add new books to the array, linked with the submit button. 
+- Step 5: Automatically update the list on the website. 
+- Step 6: Add a pop-up modal form for adding new books.
+- Step 7: Add the function to submit to new book. 
         Link the form to the constructor.
             + Status with a Read checkbox
             + Automatically capitalizing the title and author name if the user hasn't done so. 
